@@ -1,0 +1,16 @@
+<application>
+  <component name="libraryTable">
+    <library name="Dart SDK">
+      <CLASSES>
+        <root url="file://D:/Flutter/bin/cache/dart-sdk/lib" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+      <excluded>
+        <root url="file://D:/Flutter/bin/cache/dart-sdk/lib/_http" />
+        <root url="file://D:/Flutter/bin/cache/dart-sdk/lib/_chrome" />
+        <root url="file://D:/Flutter/bin/cache/dart-sdk/lib/_internal" />
+      </excluded>
+    </library>
+  </component>
+</application>
