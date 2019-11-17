@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="731124cc-e28d-4fd6-849f-35bddf99f697" name="Default" comment="">
+    <list default="true" id="731124cc-e28d-4fd6-849f-35bddf99f697" name="Default" comment="修改后的提交">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/Login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/Login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/log/OperateLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/log/OperateLogController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +207,8 @@
       <option name="presentableId" value="Default" />
       <updated>1573961946256</updated>
       <workItem from="1573961948231" duration="3150000" />
-      <workItem from="1573985121588" duration="1861000" />
+      <workItem from="1573985121588" duration="2707000" />
+      <workItem from="1574000225981" duration="395000" />
     </task>
     <task id="LOCAL-00001" summary="修改后的提交">
       <created>1573964444452</created>
@@ -282,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573967570048</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="修改后的提交">
+      <created>1573989502143</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573989502143</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
