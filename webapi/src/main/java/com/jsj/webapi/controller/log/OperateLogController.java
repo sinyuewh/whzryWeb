@@ -24,6 +24,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -124,7 +125,12 @@ public class OperateLogController {
             modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"操作日志.xls";
             filePrex="操作日志";
             begRow=1;
-            for(int i=1;i<=8;i++) colMapper.put(i,"str"+i);
+            //改
+//            for(int i=1;i<=3;i++) colMapper.put(i,"str"+i);
+
+            colMapper.put(1,"userName");
+            colMapper.put(2,"operatTime");
+            colMapper.put(3,"operatContent");
 
             File modelFile = new File(modelFiledir);
             if(!modelFile.exists())
@@ -196,6 +202,16 @@ public class OperateLogController {
             //关闭输入流和输出流并返回文件的下载地址
             is.close();
             os.close();
+
+            //插入操作日志
+            OperateLog log1 = new OperateLog();
+            log1.setLogType(1);
+            log1.setDefault();
+            log1.setUserName("admin");
+            log1.setOperatTime(new Date());
+            log1.setOperatContent("导出日志："+outFileName);
+            this.operateLogService.save(log1);
+
             return HttpResultUtil.success(appWeb.getTempFile() + "/" + outFileName);
         }
     }

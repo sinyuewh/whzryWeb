@@ -68,6 +68,7 @@ public class LoginController {
                 BeanUtils.copyProperties(users,userDTO);
                 //插入登录日志
                 OperateLog log1=new OperateLog();
+                //log1.setLogType(2);
                 log1.setDefault();
                 log1.setUserName(userName);
                 log1.setOperatTime(new Date());
