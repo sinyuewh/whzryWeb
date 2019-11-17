@@ -6,7 +6,12 @@
           <option name="url" value="http://github.com" />
           <option name="userName" value="sinyuewh@163.com" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="git@github.com:sinyuewh/whzryWeb.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
+    <option name="cloneParentDir" value="E:\武汉中瑞源信息管理系统\whzrySolution" />
   </component>
 </application>
