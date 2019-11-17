@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="731124cc-e28d-4fd6-849f-35bddf99f697" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/IntelliLang.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/colors.scheme.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/databaseSettings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger.renderers.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/debugger.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/editor.codeinsight.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-browsers.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/diff.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,6 +19,9 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -494,7 +491,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573961946256</updated>
-      <workItem from="1573961948231" duration="2738000" />
+      <workItem from="1573961948231" duration="2949000" />
     </task>
     <task id="LOCAL-00001" summary="修改后的提交">
       <created>1573964444452</created>
@@ -552,11 +549,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573967270538</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修改后的提交">
+      <created>1573967369939</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573967369939</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2738000" />
+    <option name="totallyTimeSpent" value="2949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -613,5 +617,15 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/diff.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
