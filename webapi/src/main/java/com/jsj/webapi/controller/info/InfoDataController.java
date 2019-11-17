@@ -7,10 +7,12 @@ import com.jsj.common.utils.MyStringUtil;
 import com.jsj.webapi.config.AppWeb;
 import com.jsj.webapi.config.ServerConfig;
 import com.jsj.webapi.dataobject.info.InfoData;
+import com.jsj.webapi.dataobject.log.OperateLog;
 import com.jsj.webapi.dto.info.InfoDTO;
 import com.jsj.webapi.enums.ErrorEnum;
 import com.jsj.webapi.exception.MyException;
 import com.jsj.webapi.service.info.InfoDataService;
+import com.jsj.webapi.service.log.OperateLogService;
 import com.jsj.webapi.utils.ExcelImportUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -31,6 +33,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.*;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -55,7 +58,8 @@ public class InfoDataController {
 
     @Autowired
     private AppWeb appWeb;
-
+    @Autowired
+    private OperateLogService operateLogService;
     /**
      * 接口说明：增加一个信息数据
      * @param para
@@ -80,6 +84,16 @@ public class InfoDataController {
         target=infoDataService.save(target);
         Map<String, String> map = new HashMap<>();
         map.put("infoID", target.getId()+"");
+
+        //插入操作日志
+        OperateLog log1 = new OperateLog();
+        log1.setLogType(1);
+        log1.setDefault();
+        log1.setUserName("admin");
+        log1.setOperatTime(new Date());
+        log1.setOperatContent("新增数据类型："+para.getInfoKind()+",id："+para.getId());
+        this.operateLogService.save(log1);
+
         return  HttpResultUtil.success(map);
     }
 
@@ -108,6 +122,16 @@ public class InfoDataController {
         target=infoDataService.save(target);
         Map<String, String> map = new HashMap<>();
         map.put("infoID", target.getId()+"");
+
+        //插入操作日志
+        OperateLog log1 = new OperateLog();
+        log1.setLogType(1);
+        log1.setDefault();
+        log1.setUserName("admin");
+        log1.setOperatTime(new Date());
+        log1.setOperatContent("更新数据类型："+para.getInfoKind()+",id："+para.getId());
+        this.operateLogService.save(log1);
+
         return  HttpResultUtil.success(map);
     }
 
@@ -122,6 +146,16 @@ public class InfoDataController {
     public HttpResult List(@ApiParam("查询条件") InfoDTO para) throws Exception
     {
         Page p1=this.infoDataService.getSearch(para,1,appWeb.getPageSize());
+
+        //插入操作日志
+        OperateLog log1 = new OperateLog();
+        log1.setLogType(1);
+        log1.setDefault();
+        log1.setUserName("admin");
+        log1.setOperatTime(new Date());
+        log1.setOperatContent("查询数据类型："+para.getInfoKind()+",id："+para.getId());
+        this.operateLogService.save(log1);
+
         return HttpResultUtil.success(p1);
     }
 
@@ -160,6 +194,15 @@ public class InfoDataController {
         int id1= this.infoDataService.deletMulDevice(ids);
         if(id1>0)
         {
+            //插入操作日志
+            OperateLog log1 = new OperateLog();
+            log1.setLogType(1);
+            log1.setDefault();
+            log1.setUserName("admin");
+            log1.setOperatTime(new Date());
+            log1.setOperatContent("删除id："+ids);
+            this.operateLogService.save(log1);
+
             return HttpResultUtil.success();
         }
         else
@@ -259,6 +302,16 @@ public class InfoDataController {
             {
                 return HttpResultUtil.error(900,error);
             }
+
+            //插入操作日志
+            OperateLog log1 = new OperateLog();
+            log1.setLogType(1);
+            log1.setDefault();
+            log1.setUserName("admin");
+            log1.setOperatTime(new Date());
+            log1.setOperatContent("导入文件："+fileName+",数据类型："+infoKind);
+            this.operateLogService.save(log1);
+
             //返回导入数据成功的标志
             return  HttpResultUtil.success();
         }
@@ -422,9 +475,20 @@ public class InfoDataController {
             OutputStream os = new FileOutputStream(outFile);
             wb.write(os);
 
+
+
+            //插入操作日志
+            OperateLog log1 = new OperateLog();
+            log1.setLogType(1);
+            log1.setDefault();
+            log1.setUserName("admin");
+            log1.setOperatTime(new Date());
+            log1.setOperatContent("导出:"+outFileName);
+            this.operateLogService.save(log1);
             //关闭输入流和输出流并返回文件的下载地址
             is.close();
             os.close();
+
             return HttpResultUtil.success(appWeb.getTempFile() + "/" + outFileName);
         }
     }
