@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+
+  #mvc:
+  #static-path-pattern: /static/**
+
+  #设置multipart的属性
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 50mb
+      max-request-size: 50mb
+
+
+
+
+
+
+
+
+
+
