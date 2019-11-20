@@ -252,8 +252,8 @@ public class InfoDataController {
             Map<Integer,String> map1=new HashedMap();
             if(infoKind.equals("1"))
             {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"txt1");
+                map1.put(5,"txt2");map1.put(6,"txt3");map1.put(7,"str7");map1.put(8,"str8");
             }
             else if(infoKind.equals("2"))
             {
@@ -263,31 +263,32 @@ public class InfoDataController {
             if(infoKind.equals("3"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"txt1");map1.put(8,"txt2");
+                map1.put(9,"str9");map1.put(10,"str10");
             }
             if(infoKind.equals("4"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
-                map1.put(9,"str9");map1.put(10,"str10");map1.put(11,"str11");map1.put(12,"str12");
+                map1.put(9,"txt1");map1.put(10,"txt2");map1.put(11,"str11");map1.put(12,"str12");
             }
             if(infoKind.equals("5"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
                 map1.put(9,"str9");map1.put(10,"str10");map1.put(11,"str11");map1.put(12,"str12");
-                map1.put(13,"str13");map1.put(14,"str14");map1.put(15,"str15");map1.put(16,"str16");
+                map1.put(13,"txt1");map1.put(14,"txt2");map1.put(15,"str15");map1.put(16,"str16");
             }
             if(infoKind.equals("6"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
-                map1.put(9,"str9");map1.put(10,"str10");
+                map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
+                map1.put(9,"str9");
             }
             if(infoKind.equals("7"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+                map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
                 map1.put(9,"str9");
             }
             if(infoKind.equals("8"))
@@ -355,7 +356,13 @@ public class InfoDataController {
                 modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点区域.xls";
                 filePrex="重点区域";
                 begRow=1;
-                for(int i=1;i<=8;i++) colMapper.put(i,"str"+i);
+                for(int i=1;i<=8;i++) {
+                    if(i>3&&i<7){
+
+                        colMapper.put(i,"txt"+(i-3));
+                    }
+                    else colMapper.put(i,"str"+i);
+                }
             }
             else if(para.getInfoKind().equals("2"))
             {
@@ -367,37 +374,65 @@ public class InfoDataController {
             }
             else if(para.getInfoKind().equals("3"))
             {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点产业.xls";
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点实验室.xls";
                 begRow=1;
-                for(int i=1;i<=8;i++) colMapper.put(i,"str"+i);
-                filePrex="重点产业";
+                for(int i=1;i<=10;i++) {
+                    if(i>6&&i<9){
+
+                        colMapper.put(i,"txt"+(i-6));
+                    }
+                    else colMapper.put(i,"str"+i);
+                }
+
+                filePrex="重点实验室";
             }
             else if(para.getInfoKind().equals("4"))
             {
                 modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点项目.xls";
                 begRow=1;
-                for(int i=1;i<=12;i++) colMapper.put(i,"str"+i);
+                for(int i=1;i<=12;i++) {
+                    if(i>8&&i<11){
+
+                        colMapper.put(i,"txt"+(i-8));
+                    }
+                    else colMapper.put(i,"str"+i);
+                }
                 filePrex="重点项目";
             }
             else if(para.getInfoKind().equals("5"))
             {
                 modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点企业.xls";
                 begRow=1;
-                for(int i=1;i<=16;i++) colMapper.put(i,"str"+i);
+                for(int i=1;i<=16;i++) {
+                    if(i>12&&i<15){
+                        colMapper.put(i,"txt"+(i-12));
+                    }
+                    else colMapper.put(i,"str"+i);
+                }
                 filePrex="重点企业";
             }
             else if(para.getInfoKind().equals("6"))
             {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点院校.xls";
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点高校.xls";
                 begRow=1;
-                for(int i=1;i<=10;i++) colMapper.put(i,"str"+i);
-                filePrex="重点院校";
+                for(int i=1;i<=9;i++) {
+                    if(i>5&&i<8){
+                        colMapper.put(i,"txt"+(i-5));
+                    }
+                    else colMapper.put(i,"str"+i);
+                }
+                filePrex="重点高校";
             }
             else if(para.getInfoKind().equals("7"))
             {
                 modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"金融机构.xls";
                 begRow=1;
-                for(int i=1;i<=9;i++) colMapper.put(i,"str"+i);
+                for(int i=1;i<=9;i++) {
+                    if(i>5&&i<8){
+                        colMapper.put(i,"txt"+(i-5));
+                    }
+                    else colMapper.put(i,"str"+i);
+                }
                 filePrex="金融机构";
             }
             else if(para.getInfoKind().equals("8"))
