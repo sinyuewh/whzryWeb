@@ -163,6 +163,29 @@ public class InfoDataController {
 
 
     /**
+     * 接口说明：得到区域的接口
+     * @param infoKind 信息的类别
+     * @return
+     */
+    @ApiOperation(value = "区域接口",notes = "")
+    @PostMapping(value = "/areaList")
+    public HttpResult areaList( @ApiParam("数据类别") @RequestParam(value = "infoKind")  String infoKind ,
+                                @ApiParam("字段类别") @RequestParam(value = "str") String  str
+                                    ) throws Exception
+    {
+        InfoDTO para=new InfoDTO();
+        para.setInfoKind(infoKind);
+        String fields=str;
+        /*if(infoKind.equals("10"))
+        {
+            fields="str10";
+        }*/
+        Page p1=this.infoDataService.getSearch(para,fields,-1,-1);
+        return HttpResultUtil.success(p1);
+    }
+
+
+    /**
      * 说明：info明细
      * @param id
      * @return
@@ -262,38 +285,38 @@ public class InfoDataController {
                 map1.put(1,"str1");map1.put(2,"str3");map1.put(3,"str4");
                 map1.put(4,"str5");map1.put(5,"str6");map1.put(6,"str7");map1.put(7,"str8");
             }
-            if(infoKind.equals("3"))
+            else if(infoKind.equals("3"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"txt1");map1.put(8,"txt2");
                 map1.put(9,"str9");map1.put(10,"str10");
             }
-            if(infoKind.equals("4"))
+            else if(infoKind.equals("4"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
                 map1.put(9,"txt1");map1.put(10,"txt2");map1.put(11,"str11");map1.put(12,"str12");
             }
-            if(infoKind.equals("5"))
+            else if(infoKind.equals("5"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
                 map1.put(9,"str9");map1.put(10,"str10");map1.put(11,"str11");map1.put(12,"str12");
                 map1.put(13,"txt1");map1.put(14,"txt2");map1.put(15,"str15");map1.put(16,"str16");
             }
-            if(infoKind.equals("6"))
+            else if(infoKind.equals("6"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
                 map1.put(9,"str9");
             }
-            if(infoKind.equals("7"))
+            else if(infoKind.equals("7"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
                 map1.put(9,"str9");
             }
-            if(infoKind.equals("8"))
+            else if(infoKind.equals("8"))
             {
                 map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
                 map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
