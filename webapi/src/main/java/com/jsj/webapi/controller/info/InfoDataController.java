@@ -3,6 +3,7 @@ package com.jsj.webapi.controller.info;
 import com.jsj.common.bean.HttpResult;
 import com.jsj.common.utils.HttpResultUtil;
 import com.jsj.common.utils.KeyUtil;
+import com.jsj.common.utils.MapUtil;
 import com.jsj.common.utils.MyStringUtil;
 import com.jsj.webapi.config.AppWeb;
 import com.jsj.webapi.config.ServerConfig;
@@ -14,6 +15,10 @@ import com.jsj.webapi.exception.MyException;
 import com.jsj.webapi.service.info.InfoDataService;
 import com.jsj.webapi.service.log.OperateLogService;
 import com.jsj.webapi.utils.ExcelImportUtils;
+import com.spire.doc.Document;
+import com.spire.doc.FileFormat;
+import com.spire.doc.collections.BookmarkCollection;
+import com.spire.doc.documents.BookmarksNavigator;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -33,10 +38,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.*;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by jinshouji on 2019/4/24.
@@ -511,7 +513,6 @@ public class InfoDataController {
             wb.write(os);
 
 
-
             //插入操作日志
             OperateLog log1 = new OperateLog();
             log1.setLogType(1);
@@ -526,5 +527,119 @@ public class InfoDataController {
 
             return HttpResultUtil.success(appWeb.getTempFile() + "/" + outFileName);
         }
+    }
+
+    @ApiOperation(value="导出单条数据到Word",notes="")
+    @PostMapping(value = "/exportToWord")
+    public HttpResult exportToWord(@ApiParam("数据id") @RequestParam(value = "id")  int id ) throws Exception
+    {
+        InfoData d1=this.infoDataService.findOne(id);
+        if(d1!=null)
+        {
+            InfoDTO para=new InfoDTO();
+            BeanUtils.copyProperties(d1,para);
+            //将数据填入word文档
+
+            String modelFiledir="";
+            String filePrex="";
+            //定义模板和excel的映射关系
+            if(para.getInfoKind().equals("1"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点区域.doc";
+                filePrex="重点区域";
+            }
+            else if(para.getInfoKind().equals("2"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点领域.doc";
+                filePrex="重点领域";
+            }
+            else if(para.getInfoKind().equals("3"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点实验室.doc";
+                filePrex="重点实验室";
+            }
+            else if(para.getInfoKind().equals("4"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点项目.doc";
+                filePrex="重点项目";
+            }
+            else if(para.getInfoKind().equals("5"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点企业.doc";
+                filePrex="重点企业";
+            }
+            else if(para.getInfoKind().equals("6"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点院校.doc";
+                filePrex="重点院校";
+            }
+            else if(para.getInfoKind().equals("7"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"金融机构.doc";
+                filePrex="金融机构";
+            }
+            else if(para.getInfoKind().equals("8"))
+            {
+                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"通讯录.doc";
+                filePrex="通讯录";
+            }
+            File modelFile = new File(modelFiledir);
+            if(!modelFile.exists())
+            {
+                return HttpResultUtil.error(900,"项目导出的模板文件不存在！");
+            }
+            //定义字段
+            List<String> list0=new ArrayList<>();
+            for(int i=1;i<=30;i++)
+            {
+                list0.add("str"+i);
+            }
+            for(int i=1;i<=10;i++)
+            {
+                list0.add("txt"+i);
+            }
+            for(int i=1;i<=5;i++)
+            {
+                list0.add("time"+i);
+            }
+            //设置书签的内容
+            Document doc = new Document();
+            doc.loadFromFile(modelFiledir);
+            BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(doc);
+            Map<String,Object> map1=MapUtil.convertBean(para);
+
+            BookmarkCollection bookmarkCollection = doc.getBookmarks();
+            for(String m : list0) {
+                if(bookmarkCollection.findByName(m)!=null) {
+                    bookmarksNavigator.moveToBookmark(m);
+                    //用文本内容替换原有书签位置的文本，新替换的内容与原文格式一致
+                    bookmarksNavigator.replaceBookmarkContent(map1.get(m).toString(),true);
+                }
+            }
+            //保存文档
+            String outFileName = filePrex+KeyUtil.genUniqueKey() + ".doc";
+            String outFile =appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+            doc.saveToFile(outFile, FileFormat.Doc);
+            return HttpResultUtil.success(appWeb.getTempFile() + "/" + outFileName);
+        }
+        else
+        {
+            return HttpResultUtil.error(60,"得到数据明细失败！");
+        }
+    }
+
+    /**
+     * 接口说明：得到某个字段的唯一选项列表
+     * @return
+     */
+    @ApiOperation(value = "字段列表数据",notes = "")
+    @PostMapping(value = "/fieldList")
+    public HttpResult fieldList(
+            @ApiParam("数据类型") @RequestParam(value = "infoKind", required = true) String infoKind,
+            @ApiParam("字段名称") @RequestParam(value = "fieldName", required = true) String fieldName
+    ) throws Exception
+    {
+        Page p1=this.infoDataService.getFieldSearch(infoKind,fieldName);
+        return HttpResultUtil.success(p1);
     }
 }
