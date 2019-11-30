@@ -31,6 +31,62 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
     //用来记录日志
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+
+    //得到特定字段唯一的查询结果
+    @Transactional
+    public Page getSearch(InfoDTO para, String fields,int pageIndex,int pageSize) throws Exception {
+        //设置查询条件
+        List<SearchField> condition = new ArrayList<SearchField>();
+
+        //设置关联表的查询 lift inner join orgs left join users
+        this.setTableName("infoData");
+
+        //设置查询条件
+        if (MyStringUtil.isNotEmpty(para.getInfoKind())) {
+            condition.add(new SearchField("infoData.infoKind",  para.getInfoKind()));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr1())) {
+            condition.add(new SearchField("infoData.str1", "%" + para.getStr1() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr2())) {
+            condition.add(new SearchField("infoData.str2", "%" + para.getStr2() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr3())) {
+            condition.add(new SearchField("infoData.str3", "%" + para.getStr3() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr4())) {
+            condition.add(new SearchField("infoData.str4", "%" + para.getStr4() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr5())) {
+            condition.add(new SearchField("infoData.str5", "%" + para.getStr5() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr6())) {
+            condition.add(new SearchField("infoData.str6", "%" + para.getStr6() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr7())) {
+            condition.add(new SearchField("infoData.str7", "%" + para.getStr7() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr8())) {
+            condition.add(new SearchField("infoData.str8", "%" + para.getStr8() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr9())) {
+            condition.add(new SearchField("infoData.str9", "%" + para.getStr9() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getStr10())) {
+            condition.add(new SearchField("infoData.str10", "%" + para.getStr10() + "%", SearchOperator.Contains));
+        }
+        if (MyStringUtil.isNotEmpty(para.getIds())) {
+            condition.add(new SearchField("infoData.id in ("+para.getIds()+")", "",SearchOperator.UserDefine ));
+        }
+
+        //返回查询的列
+        String fs = "distinct "+fields;
+
+        Page p1 = this.getPageListMapData(fs, "", condition, pageIndex, pageSize);
+        return p1;
+    }
+
+
     //得到查询结果
     @Transactional
     public Page getSearch(InfoDTO para, int pageIndex,int pageSize) throws Exception {
