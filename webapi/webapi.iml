@@ -93,6 +93,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-websocket:4.3.14.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.10.2" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.16" level="project" />
+    <orderEntry type="library" name="Maven: e-iceblue:spire.doc:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:1.5.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:1.5.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.5.27" level="project" />

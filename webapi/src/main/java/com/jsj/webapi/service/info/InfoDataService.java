@@ -142,6 +142,30 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
     }
 
 
+    //得到字段的唯一列表的数据
+    @Transactional
+    public Page getFieldSearch(String infoKind,String fieldName) throws Exception {
+        //设置查询条件
+        List<SearchField> condition = new ArrayList<SearchField>();
+
+        //设置关联表的查询 lift inner join orgs left join users
+        this.setTableName("infoData");
+
+        //设置查询条件
+        if (MyStringUtil.isNotEmpty(infoKind)) {
+            condition.add(new SearchField("infoData.infoKind",  infoKind));
+        }
+
+        condition.add(new SearchField(fieldName +" is not null",  "",SearchOperator.UserDefine));
+
+        //返回查询的列
+        String fs = "distinct "+fieldName;
+
+        Page p1 = this.getPageListMapData(fs, "", condition, 1, 5000);
+        return p1;
+    }
+
+
     /**
      * 删除多条数据
      * @param ids
