@@ -48,6 +48,7 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         if (MyStringUtil.isNotEmpty(para.getStr1())) {
             condition.add(new SearchField("infoData.str1", "%" + para.getStr1() + "%", SearchOperator.Contains));
         }
+
         if (MyStringUtil.isNotEmpty(para.getStr2())) {
             condition.add(new SearchField("infoData.str2", "%" + para.getStr2() + "%", SearchOperator.Contains));
         }
@@ -100,9 +101,11 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         if (MyStringUtil.isNotEmpty(para.getInfoKind())) {
             condition.add(new SearchField("infoData.infoKind",  para.getInfoKind()));
         }
-        if (MyStringUtil.isNotEmpty(para.getStr1())) {
-            condition.add(new SearchField("infoData.str1", "%" + para.getStr1() + "%", SearchOperator.Contains));
+        if (MyStringUtil.isNotEmpty(para.getStr2())) {
+            condition.add(new SearchField(para.getStr1(), "%" + para.getStr2() + "%", SearchOperator.Contains));
         }
+
+        /*
         if (MyStringUtil.isNotEmpty(para.getStr2())) {
             condition.add(new SearchField("infoData.str2", "%" + para.getStr2() + "%", SearchOperator.Contains));
         }
@@ -133,6 +136,7 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         if (MyStringUtil.isNotEmpty(para.getIds())) {
             condition.add(new SearchField("infoData.id in ("+para.getIds()+")", "",SearchOperator.UserDefine ));
         }
+        */
 
         //返回查询的列
         String fs = "infoData.*";

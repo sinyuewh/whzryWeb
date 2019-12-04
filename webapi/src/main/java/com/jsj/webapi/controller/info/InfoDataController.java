@@ -26,6 +26,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hwpf.HWPFDocument;
+import org.apache.poi.hwpf.usermodel.Bookmark;
+import org.apache.poi.hwpf.usermodel.Bookmarks;
+import org.apache.poi.hwpf.usermodel.Range;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.BeanUtils;
@@ -626,23 +630,7 @@ public class InfoDataController {
                 list0.add("time"+i);
             }
             //设置书签的内容
-            Document doc = new Document();
-            doc.loadFromFile(modelFiledir);
-            BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(doc);
-            Map<String,Object> map1=MapUtil.convertBean(para);
-
-            BookmarkCollection bookmarkCollection = doc.getBookmarks();
-            for(String m : list0) {
-                if(bookmarkCollection.findByName(m)!=null) {
-                    bookmarksNavigator.moveToBookmark(m);
-                    //用文本内容替换原有书签位置的文本，新替换的内容与原文格式一致
-                    bookmarksNavigator.replaceBookmarkContent(map1.get(m).toString(),true);
-                }
-            }
-            //保存文档
-            String outFileName = filePrex+KeyUtil.genUniqueKey() + ".doc";
-            String outFile =appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
-            doc.saveToFile(outFile, FileFormat.Doc);
+            String outFileName=this.setWordValue2(modelFiledir,para,list0,filePrex);
             return HttpResultUtil.success(appWeb.getTempFile() + "/" + outFileName);
         }
         else
@@ -664,5 +652,70 @@ public class InfoDataController {
     {
         Page p1=this.infoDataService.getFieldSearch(infoKind,fieldName);
         return HttpResultUtil.success(p1);
+    }
+
+    //-----------------------------------------------------------------------------------------------------------------
+    //利用com.spire.doc 设置doc控件的值
+    private String setWordValue(String modelFiledir,InfoDTO para,
+             List<String> list0,String filePrex) throws Exception
+    {
+        Document doc = new Document();
+        doc.loadFromFile(modelFiledir);
+        BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(doc);
+        Map<String,Object> map1=MapUtil.convertBean(para);
+
+        BookmarkCollection bookmarkCollection = doc.getBookmarks();
+        for(String m : list0) {
+            if(bookmarkCollection.findByName(m)!=null) {
+                bookmarksNavigator.moveToBookmark(m);
+                //用文本内容替换原有书签位置的文本，新替换的内容与原文格式一致
+                bookmarksNavigator.replaceBookmarkContent(map1.get(m).toString(),true);
+            }
+        }
+        //保存文档
+        String outFileName = filePrex+KeyUtil.genUniqueKey() + ".doc";
+        String outFile =appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+        doc.saveToFile(outFile, FileFormat.Doc);
+        return outFileName;
+    }
+
+    //利用POI 设置doc控件的值
+    private String setWordValue2(String modelFiledir,InfoDTO para,
+                                List<String> list0,String filePrex) throws Exception
+    {
+        String outFileName="";
+        if (modelFiledir.endsWith(".doc")) {
+            InputStream is = new FileInputStream(new File(modelFiledir));
+            HWPFDocument document = new HWPFDocument(is);
+            Bookmarks bookmarks = document.getBookmarks();
+            Map<String,Object> map1=MapUtil.convertBean(para);
+            Integer size1=bookmarks.getBookmarksCount();
+            for(int dwI = 0;dwI <size1 ;dwI++){
+                Bookmark bookmark = bookmarks.getBookmark(dwI);
+                String key1=bookmark.getName();
+                if(list0.contains(key1)){
+                    Range range = new Range(bookmark.getStart(),bookmark.getEnd(),document);
+                    Object value1=map1.get(bookmark.getName());
+                    if(MyStringUtil.isNotEmpty(value1))
+                    {
+                        range.replaceText(value1.toString(),false);
+                    }
+                    else
+                    {
+                        range.replaceText(" ",false);
+                    }
+                }
+            }
+            //保存文档
+            outFileName = filePrex+KeyUtil.genUniqueKey() + ".doc";
+            String outFile =appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+            OutputStream os = new FileOutputStream(outFile);
+            document.write(os);
+
+            //关闭文件流
+            is.close();
+            os.close();
+        }
+        return outFileName;
     }
 }
