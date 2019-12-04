@@ -2,169 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afb4f2c7-ce32-43d7-a228-96e3c2852970" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/sysframe/OrgController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/sysframe/OrgsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/bean/HttpResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/bean/TreeBean.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/config/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/config/SpringApplicationContextHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/config/SystemConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/db/DBPool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/math/Arith.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/repository/BaseRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/service/BaseService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/service/SqlBuilderBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/ArrayUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/CodeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/CookieUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/EnumUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/HttpResultUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/IpUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/JsonUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/KeyUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/MapDistance.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/MapUtil$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/MapUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/MyStringUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/PostObjectToOss.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/SerializeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/DynamicSpecifications$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/DynamicSpecifications$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/DynamicSpecifications.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/PageUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/SearchField.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/SearchFilter$ConjunctionType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/SearchFilter$Operator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/SearchFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/com/jsj/common/utils/jpa/SearchOperator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/redis.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/target/classes/system.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/application-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/city/Cities.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/city/Districts.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/city/Provinces.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/DruidConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/WebapiApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/aspect/HttpAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/bean/HttpResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/AppWeb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/JpushConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/RestTemplateConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/ServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/WebAppConfigurer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/WebSocketConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/config/WebWeixinConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/AbstractController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/Login/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/document/FileDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/document/FileKindController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/info/InfoDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/log/OperateLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/controller/querystatistics/QueryResultController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/redis/RedisCacheManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/redis/RedisConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/redis/RedisSessionDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/redis/RedisShiroCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/shiro/CustomSessionListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/shiro/MySessionManage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/shiro/MyShiroRealm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/core/shiro/ShiroConfiguration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/AbstractEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/document/FileData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/document/FileKind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/info/AddressBook.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/info/InfoData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/log/OperateLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/Attachment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/ExcelModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/Orgs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/Permissions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/RolePermissions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/Roles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/ShiroUsers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/UserRoles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dataobject/sysframe/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dto/document/FileDataDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dto/document/FileKindDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dto/info/InfoDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dto/log/OperateLogDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/dto/sysframe/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/enums/ErrorEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/exception/ExceptionHandle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/exception/MyException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/document/FileDataRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/document/FileKindRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/info/AddressBookRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/info/InfoDataRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/log/OperateLogRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/AttachmentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/ExcelModelRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/OrgsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/PermissionsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/RolePermissionsRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/RolesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/UserRolesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/repository/sysframe/UsersRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/document/FileDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/document/FileKindService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/info/AddressBookService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/info/InfoDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/log/OperateLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/sysframe/CommApiService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/sysframe/ExcelModelService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/sysframe/OrgsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/sysframe/RolesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/service/sysframe/UsersService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/CommApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/DateTools.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/ExcelImportUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/FileUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/GaodeMapUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/SQLUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/SendMessageUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/SmsClientAccessTool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/SmsClientSend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/SpiderUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/utils/TimeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/com/jsj/webapi/websocket/WebSocketServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/logback-spring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/sql/whrzydb2019.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_0dbe4dae11e04f2ca3403bd65a0a4b0d.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_1294bb9cf1694ec09016856d46ca7ab1.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_411f36db54cd4bd0aad70a4b75a8d290.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_461089d0337749bebf77a7b88e9c6057.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_496dfed1a6ea42b78b5d899438ac7481.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_6880ef8690004973868d6645589997bf.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_db968f6f671549f5ac6432370241b36f.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/2_f862bd24c39642e5990a78c33ce11e98.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/3_432c3d783463466aaee9653dbe355fcf.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/3_baa464d447dd4a14be24af01248c80f0.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/appFiles/3_e42c6b0589de41e2a81f07628f72c782.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/tempFiles/重点区域20191107233353497.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/tempFiles/重点区域20191107233500629.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/tempFiles/重点区域20191110142218266.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/通讯录.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/重点企业.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/重点区域.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/重点院校.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/重点项目.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/重点领域.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/templates/金融机构.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/txt1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/target/classes/static/txt2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/webapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/webapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whzry.iml" beforeDir="false" afterPath="$PROJECT_DIR$/whzry.iml" afterDir="false" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoKindDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/InfoData.java" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/InfoData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoDTO.java" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/utils/CommApp.java" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/utils/CommApp.java" />
     </list>
+    <ignored path="$PROJECT_DIR$/webapi/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/common/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,8 +22,45 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/webapi/src/main/resources/test.html" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/WebapiApplication.java" />
+        <option value="$PROJECT_DIR$/webapi/pom.xml" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoDTO.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/enums/InfoKindEnum.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/sysframe/Sysonfig.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/sysframe/SysConfig.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoKindDTO.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/utils/CommApp.java" />
+        <option value="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/InfoData.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -182,6 +68,54 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="whzry" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="whzry" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="whzry" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectId" id="1UUxkIQWPvyBYGOh90eHmjSXhdW" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -213,37 +147,65 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whzry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whzryWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
   <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelOrder2" value="2" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RequestMappingsPanelWidth2" value="75" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
-    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.jsj.webapi.controller.info" />
-      <recent name="com.jsj.webapi.dto.sysframe" />
-      <recent name="com.jsj.webapi.controller.sysframe" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static\templates" />
       <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static\templates\word" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jsj.webapi.dto.info" />
+      <recent name="com.jsj.webapi.dataobject.sysframe" />
+      <recent name="com.jsj.webapi.enums" />
+      <recent name="com.jsj.webapi.controller.info" />
+      <recent name="com.jsj.webapi.dto.sysframe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -258,55 +220,246 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.WebapiApplication">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
     <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="FlutterRunConfigurationType" factoryName="Flutter">
       <method />
     </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
     </configuration>
     <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
       <setting name="vmparams" value="" />
@@ -315,29 +468,74 @@
       <setting name="launchBrowser" value="true" />
       <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
-      <method v="2" />
+      <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
     </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="webapi" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <module name="webapi" />
+      <envs />
+      <method />
     </configuration>
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="filePath" />
       <option name="vmParameters" />
       <option name="alternativeJrePath" />
@@ -345,66 +543,108 @@
       <option name="passParentEnvs" value="true" />
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebapiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="webapi" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jsj.webapi.WebapiApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+      <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
       <envs />
-      <method v="2" />
+      <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="false" name="WebapiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.jsj.webapi.WebapiApplication" />
+      <module name="webapi" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.WebapiApplication" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -424,7 +664,7 @@
       <workItem from="1575128125592" duration="2102000" />
       <workItem from="1575298435774" duration="3959000" />
       <workItem from="1575379087441" duration="9657000" />
-      <workItem from="1575425122350" duration="8803000" />
+      <workItem from="1575461784161" duration="6287000" />
     </task>
     <task id="LOCAL-00001" summary="delete test">
       <created>1574003633872</created>
@@ -464,26 +704,501 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="51794000" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19349681" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15401301" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275488" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2657267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23933902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete test" />
     <option name="LAST_COMMIT_MESSAGE" value="delete test" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="6" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/webapi/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#create#0;class#InfoDataController#0" expanded="false" />
+            <element signature="method#update#0;class#InfoDataController#0" expanded="false" />
+            <element signature="method#importExcel#0;class#InfoDataController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.3.14.RELEASE/spring-aop-4.3.14.RELEASE.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.3.14.RELEASE/spring-aop-4.3.14.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10274">
+          <caret line="519" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jsj/common/utils/MapUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="73" column="19" lean-forward="false" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="104" column="16" lean-forward="false" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+          <folding>
+            <element signature="method#getSearch#0;class#InfoDataService#0" expanded="false" />
+            <element signature="method#getSearch#1;class#InfoDataService#0" expanded="false" />
+            <element signature="method#deletMulDevice#0;class#InfoDataService#0" expanded="false" />
+            <element signature="method#ImportXlsToInfoDB#0;class#InfoDataService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/WebapiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="16" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/document/FileKindController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/aspect/HttpAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameter.hints.xml" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseSettings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/colors.scheme.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/resources/static/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/aspect/HttpAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/e-iceblue/spire.doc/2.2.0/spire.doc-2.2.0.jar!/com/spire/doc/documents/BookmarksNavigator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jsj/common/utils/MapUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.3.14.RELEASE/spring-aop-4.3.14.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10274">
+          <caret line="519" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/document/FileKindController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/WebapiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/e-iceblue/spire.doc/2.2.0/spire.doc-2.2.0.jar!/com/spire/doc/Document.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-660">
+          <caret line="57" column="28" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="65" selection-end-column="28" />
+          <folding>
+            <element signature="n#build#0;n#project#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="153" column="9" lean-forward="false" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="92" column="16" lean-forward="false" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+          <folding>
+            <element signature="method#getSearch#0;class#InfoDataService#0" expanded="false" />
+            <element signature="method#getSearch#1;class#InfoDataService#0" expanded="false" />
+            <element signature="method#deletMulDevice#0;class#InfoDataService#0" expanded="false" />
+            <element signature="method#ImportXlsToInfoDB#0;class#InfoDataService#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/poi/poi-scratchpad/3.8/poi-scratchpad-3.8.jar!/org/apache/poi/hwpf/model/PropertyNode.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#1297#1298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/poi/poi-scratchpad/3.8/poi-scratchpad-3.8.jar!/org/apache/poi/hwpf/model/BookmarksTables.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.3.14.RELEASE/spring-aop-4.3.14.RELEASE.jar!/org/springframework/aop/interceptor/ExposeInvocationInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.3.14.RELEASE/spring-aop-4.3.14.RELEASE.jar!/org/springframework/aop/aspectj/AspectJAfterAdvice.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/poi/poi/3.8/poi-3.8.jar!/org/apache/poi/POIDocument.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/poi/poi-scratchpad/3.8/poi-scratchpad-3.8.jar!/org/apache/poi/hwpf/HWPFDocument.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1034">
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/poi/poi-scratchpad/3.8/poi-scratchpad-3.8.jar!/org/apache/poi/hwpf/usermodel/BookmarksImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3828">
+          <caret line="200" column="0" lean-forward="false" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+          <folding>
+            <element signature="e#6770#6771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.3.14.RELEASE/spring-core-4.3.14.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/jsj/common/utils/KeyUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#1211#1212#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="705" column="21" lean-forward="false" selection-start-line="705" selection-start-column="21" selection-end-line="705" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#create#0;class#InfoDataController#0" expanded="false" />
+            <element signature="method#update#0;class#InfoDataController#0" expanded="false" />
+            <element signature="method#importExcel#0;class#InfoDataController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/config/AppWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="19" column="49" lean-forward="true" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/enums/ErrorEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/enums/InfoKindEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/sysframe/SysConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/document/FileKindDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="82" column="38" lean-forward="false" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dto/info/InfoKindDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/utils/CommApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#UploadFile#0;class#CommApp#0" expanded="false" />
+            <element signature="method#getServerAddress#0;class#CommApp#0" expanded="false" />
+            <element signature="method#getCopyFrom#0;class#CommApp#0" expanded="false" />
+            <element signature="method#getCopyFrom#1;class#CommApp#0" expanded="false" />
+            <element signature="method#isPhone#0;class#CommApp#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/InfoData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="59" column="13" lean-forward="false" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+            <element signature="e#1658#1659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

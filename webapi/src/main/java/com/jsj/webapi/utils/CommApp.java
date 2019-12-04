@@ -3,6 +3,7 @@ package com.jsj.webapi.utils;
 import com.jsj.common.bean.HttpResult;
 import com.jsj.common.utils.HttpResultUtil;
 import com.jsj.common.utils.KeyUtil;
+import com.jsj.webapi.dto.info.InfoKindDTO;
 import com.jsj.webapi.enums.ErrorEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,9 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -188,5 +187,35 @@ public class CommApp {
             }
         }
         return error;
+    }
+
+    /**
+     * 得到数据类别的Map
+     * @Author 金寿吉
+     * @Date  2019-12-4
+     * @return
+     */
+    public static Map<Integer,InfoKindDTO> getInfoMap()
+    {
+       Map<Integer,InfoKindDTO> map=new HashMap<>();
+       InfoKindDTO data1=new InfoKindDTO("重点区域","重点区域.xls","重点区域.doc");
+       map.put(1,data1);
+
+       InfoKindDTO data3=new InfoKindDTO("重点实验室","重点实验室.xls","重点实验室.doc");
+       map.put(3,data3);
+
+       InfoKindDTO data4=new InfoKindDTO("重点项目","重点项目.xls","重点项目.doc");
+       map.put(4,data4);
+
+       InfoKindDTO data5=new InfoKindDTO("重点企业","重点企业.xls","重点企业.doc");
+       map.put(5,data5);
+
+       InfoKindDTO data6=new InfoKindDTO("重点院校","重点院校.xls","重点院校.doc");
+       map.put(6,data6);
+
+       InfoKindDTO data7=new InfoKindDTO("金融机构","金融机构.xls","金融机构.doc");
+       map.put(7,data7);
+
+       return map;
     }
 }

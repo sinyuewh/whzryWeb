@@ -54,6 +54,11 @@ public class InfoData extends AbstractEntity implements Serializable {
     private String str29;       //字段数据29
     private String str30;      //字段数据30
 
+    private String reportName;      //上报单位
+    private Date reportTime;        //上报时间
+    private Integer reportStatus;   //上报状态
+    private String abc;              //数据分类
+
     @Column(columnDefinition ="TEXT")
     private String txt1;      //text字段1
 

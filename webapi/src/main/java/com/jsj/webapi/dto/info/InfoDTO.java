@@ -78,4 +78,7 @@ public class InfoDTO {
     private Date time5;        //日期类型字段5
 
     private String ids;         //用户选中的多个数据的id
+
+    private String reportName;  //上报单位
+    private Date reportTime;    //上报时间
 }

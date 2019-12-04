@@ -3,32 +3,19 @@ package com.jsj.webapi.controller.info;/**
  */
 
 import com.jsj.common.bean.HttpResult;
-import com.jsj.common.utils.HttpResultUtil;
-import com.jsj.webapi.dataobject.log.OperateLog;
-import com.jsj.webapi.dataobject.sysframe.Orgs;
-import com.jsj.webapi.dto.sysframe.OrgsDTO;
-import com.jsj.webapi.enums.ErrorEnum;
-import com.jsj.webapi.exception.MyException;
 import com.jsj.webapi.service.log.OperateLogService;
 import com.jsj.webapi.service.sysframe.OrgsService;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.validation.Valid;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author ：jinshouji
@@ -50,10 +37,21 @@ public class DataReportController {
     @Autowired
     private OperateLogService operateLogService;
 
-    @ApiOperation(value = "生成上报文件（明文）",notes = "")
+    @ApiOperation(value = "根据数据ID生成上报文件（明文）",notes = "")
     @PostMapping(value = "/createReportFile")
     public HttpResult create(String ids)
     {
         return null;
     }
+
+    @ApiOperation(value = "一键上报生成上报文件（明文）",notes = "")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "registerTime", value = "登记时间",  paramType = "query", dataType = "String"),
+    })
+    @PostMapping(value = "/onClickToReport")
+    public HttpResult onClickToReport(String registerTime)
+    {
+        return null;
+    }
+
 }
