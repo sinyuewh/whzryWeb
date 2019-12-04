@@ -194,14 +194,14 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
 
     //将Xls对象的数据导入到数据库
     @Transactional
-    public String ImportXlsToInfoDB(Workbook wb,String infoKind,
-                                Integer begRow,
-                                Map<Integer,String> colDic) throws  Exception
+    public String ImportXlsToInfoDB(Integer sheetIndex,Workbook wb,String infoKind,
+                                    Integer begRow,
+                                    Map<Integer,String> colDic) throws  Exception
     {
         //得到第一个shell
         String[] cols=new String[]{};
+        Sheet sheet=wb.getSheetAt(sheetIndex);
 
-        Sheet sheet=wb.getSheetAt(0);
         //得到Excel的行数
         int totalRows=sheet.getPhysicalNumberOfRows();
         //总列数
@@ -259,5 +259,13 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
             target=this.save(target);
         }
         return "";          //返回空字符串，表示成功
+    }
+
+    @Transactional
+    public String ImportXlsToInfoDB(Workbook wb,String infoKind,
+                                Integer begRow,
+                                Map<Integer,String> colDic) throws  Exception
+    {
+        return this.ImportXlsToInfoDB(0,wb,infoKind,begRow,colDic);          //返回空字符串，表示成功
     }
 }
