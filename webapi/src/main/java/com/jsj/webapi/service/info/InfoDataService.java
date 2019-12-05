@@ -169,7 +169,7 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         return p1;
     }
 
-
+    /*---------------------------------------------------------------------------------------------------------*/
     /**
      * 删除多条数据
      * @param ids
@@ -191,6 +191,79 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         return result;
     }
 
+
+    /**
+     * 成批的设置多条数据的分类
+     * @param ids
+     * @return
+     */
+    @Transactional
+    public int setMulInfoKind(String ids,String kind)
+    {
+        int result=0;
+        if(MyStringUtil.isNotEmpty(ids))
+        {
+            String[] s1=ids.split(",");
+            for(String m :s1)
+            {
+                InfoData data1= this.findOne(Integer.parseInt(m));
+                if(data1!=null && MyStringUtil.isNotEmpty(kind)) {
+                    data1.setAbc(kind);
+                    this.save(data1);
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 将数据加入到代表列表  90 的分类表示待办数据列表
+     * @param ids
+     * @return
+     */
+    @Transactional
+    public int addReportList(String ids)
+    {
+        int result=0;
+        if(MyStringUtil.isNotEmpty(ids))
+        {
+            String[] s1=ids.split(",");
+            for(String m :s1)
+            {
+                InfoData data1= this.findOne(Integer.parseInt(m));
+                if(data1!=null) {
+                    InfoData data2=new InfoData();
+                    BeanUtils.copyProperties(data1,data2);
+
+                    data2.setId(0);
+                    data2.setParent(data1.getId());
+                    data2.setInfoKind("90");
+                    this.save(data2);
+
+                    result++;
+                }
+            }
+        }
+        return result;
+    }
+
+
+    /**
+     * 根据数据的ids，得到按组分类的List
+     * @param ids
+     * @return
+     */
+    @Transactional
+    public Dictionary<String,List<Map<String,Object>>> getKindGroupListByToDoList(String ids)
+    {
+        Dictionary<String,List<Map<String,Object>>> dic1=new Hashtable<>();
+        String sql="select * from InfoData where id in (select parent from InfoData where infoKind='90') order by infoKind";
+        return dic1;
+    }
+
+    /*----------------------------------------------------------------------------------------------------------*/
 
     //将Xls对象的数据导入到数据库
     @Transactional

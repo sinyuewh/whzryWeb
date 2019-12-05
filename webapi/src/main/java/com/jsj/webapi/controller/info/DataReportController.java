@@ -3,6 +3,7 @@ package com.jsj.webapi.controller.info;/**
  */
 
 import com.jsj.common.bean.HttpResult;
+import com.jsj.webapi.service.info.InfoDataService;
 import com.jsj.webapi.service.log.OperateLogService;
 import com.jsj.webapi.service.sysframe.OrgsService;
 import io.swagger.annotations.Api;
@@ -35,16 +36,19 @@ public class DataReportController {
     private OrgsService orgsService;
 
     @Autowired
+    private InfoDataService infoDataService;
+
+    @Autowired
     private OperateLogService operateLogService;
 
-    @ApiOperation(value = "根据数据ID生成上报文件（明文）",notes = "")
+    @ApiOperation(value = "根据待办数据ID生成上报文件",notes = "")
     @PostMapping(value = "/createReportFile")
     public HttpResult create(String ids)
     {
         return null;
     }
 
-    @ApiOperation(value = "一键上报生成上报文件（明文）",notes = "")
+    @ApiOperation(value = "一键上报生成上报文件",notes = "")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "registerTime", value = "登记时间",  paramType = "query", dataType = "String"),
     })

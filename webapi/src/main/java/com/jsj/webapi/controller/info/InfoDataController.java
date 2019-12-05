@@ -241,6 +241,37 @@ public class InfoDataController {
     }
 
 
+    /**
+     * 说明：删除数据
+     * @param ids
+     * @return
+     */
+    @ApiOperation(value="成批设置数据的分类",notes="")
+    @RequestMapping(value = "/setKind",method = {RequestMethod.POST})
+    public HttpResult setKind(@ApiParam("数据id列表") @RequestParam(value = "ids")  String ids,
+                              @ApiParam("数据分类") @RequestParam(value = "kind") String kind)
+    {
+        int id1= this.infoDataService.setMulInfoKind(ids,kind);
+        if(id1>0)
+        {
+            //插入操作日志
+            OperateLog log1 = new OperateLog();
+            log1.setLogType(1);
+            log1.setDefault();
+            log1.setUserName("admin");
+            log1.setOperatTime(new Date());
+            log1.setOperatContent("设置数据【："+ids+"】的分类为"+kind);
+            this.operateLogService.save(log1);
+
+            return HttpResultUtil.success();
+        }
+        else
+        {
+            return HttpResultUtil.error(40,"删除数据操作失败！");
+        }
+    }
+
+
     @ApiOperation(value="导入数据",notes="")
     @PostMapping(value = "/import")
     public HttpResult importExcel(

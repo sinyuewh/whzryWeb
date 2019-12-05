@@ -36,6 +36,8 @@ public abstract class AbstractEntity {
     @Column(length=50,unique = true)
     private String guid;            //数据的guid
 
+    private int parent;             //关联的父数据ID
+
     //构造函数
     public AbstractEntity()
     {
