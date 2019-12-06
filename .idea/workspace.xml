@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="afb4f2c7-ce32-43d7-a228-96e3c2852970" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/ReportInfoData.java" afterDir="false" />
+    <list default="true" id="afb4f2c7-ce32-43d7-a228-96e3c2852970" name="Default" comment="delete test">
+      <change afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/repository/info/ReportInfoDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/ReportInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/DataReportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/AbstractEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/AbstractEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/InfoData.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/InfoData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/ReportInfoData.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/dataobject/info/ReportInfoData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,19 +51,19 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.jsj.webapi.dataobject.info" />
-      <recent name="com.jsj.webapi.dto.info" />
-      <recent name="com.jsj.webapi.dataobject.sysframe" />
-      <recent name="com.jsj.webapi.enums" />
-      <recent name="com.jsj.webapi.controller.info" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static\templates" />
       <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static\templates\word" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jsj.webapi.service.info" />
+      <recent name="com.jsj.webapi.repository.info" />
+      <recent name="com.jsj.webapi.dataobject.info" />
+      <recent name="com.jsj.webapi.dto.info" />
+      <recent name="com.jsj.webapi.dataobject.sysframe" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\武汉中瑞源信息管理系统\whzry2019Solution\whzryWeb\webapi\src\main\resources\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -244,7 +245,8 @@
       <workItem from="1575298435774" duration="3959000" />
       <workItem from="1575379087441" duration="9657000" />
       <workItem from="1575461784161" duration="6287000" />
-      <workItem from="1575516302427" duration="8501000" />
+      <workItem from="1575516302427" duration="8746000" />
+      <workItem from="1575610986289" duration="9400000" />
     </task>
     <task id="LOCAL-00001" summary="delete test">
       <created>1574003633872</created>
@@ -281,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574006705382</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="delete test">
+      <created>1575538218867</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575538218867</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +301,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -301,22 +312,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete test" />
     <option name="LAST_COMMIT_MESSAGE" value="delete test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java</url>
-          <line>253</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/service/info/InfoDataService.java</url>
-          <line>202</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

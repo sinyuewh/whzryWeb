@@ -3,6 +3,7 @@ package com.jsj.webapi.controller.info;/**
  */
 
 import com.jsj.common.bean.HttpResult;
+import com.jsj.common.utils.HttpResultUtil;
 import com.jsj.webapi.service.info.InfoDataService;
 import com.jsj.webapi.service.log.OperateLogService;
 import com.jsj.webapi.service.sysframe.OrgsService;
@@ -14,6 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@Api(tags = {"6系统管理"}, description = "数据上报")
+@Api(tags = {"5数据上报"}, description = "数据上报")
 @RequestMapping(value = "/web/dataReport")
 public class DataReportController {
 
@@ -41,9 +43,19 @@ public class DataReportController {
     @Autowired
     private OperateLogService operateLogService;
 
+    @ApiOperation(value = "得到待报数据的列表和数量",notes = "")
+    @PostMapping(value = "/list")
+    public HttpResult list()
+    {
+        String sql="select infoKind,infoName,count(*) infoCount from reportinfodata where status=0 group by infokind";
+        Page p1=this.infoDataService.getPageListMapData(sql,-1,-1);
+        return HttpResultUtil.success(p1);
+    }
+
+
     @ApiOperation(value = "根据待办数据ID生成上报文件",notes = "")
     @PostMapping(value = "/createReportFile")
-    public HttpResult create(String ids)
+    public HttpResult create()
     {
         return null;
     }

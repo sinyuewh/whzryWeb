@@ -6,8 +6,10 @@ import com.jsj.common.utils.MyStringUtil;
 import com.jsj.common.utils.jpa.SearchField;
 import com.jsj.common.utils.jpa.SearchOperator;
 import com.jsj.webapi.dataobject.info.InfoData;
+import com.jsj.webapi.dataobject.info.ReportInfoData;
 import com.jsj.webapi.dto.info.InfoDTO;
 import com.jsj.webapi.exception.MyException;
+import com.jsj.webapi.repository.info.ReportInfoDataRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -16,6 +18,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,6 +33,9 @@ import java.util.*;
 public class InfoDataService extends BaseService<InfoData, Integer> {
     //用来记录日志
     private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @Autowired
+    private ReportInfoDataRepository reportInfoDataRepository;
 
 
     //得到特定字段唯一的查询结果
@@ -217,51 +223,6 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         return result;
     }
 
-
-    /**
-     * 将数据加入到代表列表  90 的分类表示待办数据列表
-     * @param ids
-     * @return
-     */
-    @Transactional
-    public int addReportList(String ids)
-    {
-        int result=0;
-        if(MyStringUtil.isNotEmpty(ids))
-        {
-            String[] s1=ids.split(",");
-            for(String m :s1)
-            {
-                InfoData data1= this.findOne(Integer.parseInt(m));
-                if(data1!=null) {
-                    InfoData data2=new InfoData();
-                    BeanUtils.copyProperties(data1,data2);
-
-                    data2.setId(0);
-                    data2.setParent(data1.getId());
-                    data2.setInfoKind("90");
-                    this.save(data2);
-
-                    result++;
-                }
-            }
-        }
-        return result;
-    }
-
-
-    /**
-     * 根据数据的ids，得到按组分类的List
-     * @param ids
-     * @return
-     */
-    @Transactional
-    public Dictionary<String,List<Map<String,Object>>> getKindGroupListByToDoList(String ids)
-    {
-        Dictionary<String,List<Map<String,Object>>> dic1=new Hashtable<>();
-        String sql="select * from InfoData where id in (select parent from InfoData where infoKind='90') order by infoKind";
-        return dic1;
-    }
 
     /*----------------------------------------------------------------------------------------------------------*/
 

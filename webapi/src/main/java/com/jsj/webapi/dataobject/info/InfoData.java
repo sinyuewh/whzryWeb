@@ -94,4 +94,48 @@ public class InfoData extends AbstractEntity implements Serializable {
     private Date time3;        //日期类型字段3
     private Date time4;        //日期类型字段4
     private Date time5;        //日期类型字段5
+
+
+    //根据信息的类别，得到信息类别的名称
+    public String getInfoKindName()
+    {
+        String result="";
+        if(this.infoKind.equals("1"))
+        {
+            result="重点区域";
+        }
+        else if(this.infoKind.equals("2"))
+        {
+            result="重点领域";
+        }
+        else if(this.infoKind.equals("3"))
+        {
+            result="重点领域";
+        }
+        else if(this.infoKind.equals("4"))
+        {
+            result="重点实验室";
+        }
+        else if(this.infoKind.equals("5"))
+        {
+            result="重点项目";
+        }
+        else if(this.infoKind.equals("6"))
+        {
+            result="重点企业";
+        }
+        else if(this.infoKind.equals("7"))
+        {
+            result="重点院校";
+        }
+        else if(this.infoKind.equals("8"))
+        {
+            result="金融机构";
+        }
+        else if(this.infoKind.equals("9"))
+        {
+            result="";
+        }
+        return  result;
+    }
 }

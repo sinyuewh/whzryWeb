@@ -241,8 +241,40 @@ public class InfoDataController {
     }
 
 
+
     /**
-     * 说明：删除数据
+     * 说明：成批的将数据导入到待报列表
+     * @param ids
+     * @return
+     */
+    @ApiOperation(value="成批的将数据导入到待报列表",notes="")
+    @RequestMapping(value = "/infoToReportList",method = {RequestMethod.POST})
+    public HttpResult infoToReportList(@ApiParam("数据id列表") @RequestParam(value = "ids")  String ids)
+    {
+        int id1= this.infoDataService.addReportList(ids);
+        if(id1>0)
+        {
+            //插入操作日志
+            OperateLog log1 = new OperateLog();
+            log1.setLogType(1);
+            log1.setDefault();
+            log1.setUserName("admin");
+            log1.setOperatTime(new Date());
+            log1.setOperatContent("成批的将数据导入到待报列表："+ids);
+            this.operateLogService.save(log1);
+
+            return HttpResultUtil.success();
+        }
+        else
+        {
+            return HttpResultUtil.error(40,"删除数据操作失败！");
+        }
+    }
+
+
+
+    /**
+     * 说明：成批设置数据的分类
      * @param ids
      * @return
      */

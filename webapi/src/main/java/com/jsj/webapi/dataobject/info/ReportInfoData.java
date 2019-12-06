@@ -20,6 +20,7 @@ public class ReportInfoData extends AbstractEntity implements Serializable {
 
     private static final long serialVersionUID = -8701147945382636515L;
     private String infoKind;   //数据类型
+    private String infoName;    //数据类型Name
 
     private String str1;       //字段数据1
     private String str2;       //字段数据2
