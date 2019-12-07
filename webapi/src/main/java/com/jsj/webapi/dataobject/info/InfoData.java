@@ -2,12 +2,14 @@ package com.jsj.webapi.dataobject.info;
 
 import com.jsj.webapi.dataobject.AbstractEntity;
 import lombok.Data;
+import org.apache.commons.collections.map.HashedMap;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Map;
 
 /**
  * infoData： 综合信息通用表
@@ -97,45 +99,247 @@ public class InfoData extends AbstractEntity implements Serializable {
 
 
     //根据信息的类别，得到信息类别的名称
-    public String getInfoKindName()
+    public static String getNameByInfoKind(String infoKind)
     {
         String result="";
-        if(this.infoKind.equals("1"))
+        if(infoKind.equals("1"))
         {
             result="重点区域";
         }
-        else if(this.infoKind.equals("2"))
+        else if(infoKind.equals("2"))
         {
             result="重点领域";
         }
-        else if(this.infoKind.equals("3"))
-        {
-            result="重点领域";
-        }
-        else if(this.infoKind.equals("4"))
+        else if(infoKind.equals("3"))
         {
             result="重点实验室";
         }
-        else if(this.infoKind.equals("5"))
+        else if(infoKind.equals("4"))
         {
             result="重点项目";
         }
-        else if(this.infoKind.equals("6"))
+        else if(infoKind.equals("5"))
         {
             result="重点企业";
         }
-        else if(this.infoKind.equals("7"))
+        else if(infoKind.equals("6"))
         {
             result="重点院校";
         }
-        else if(this.infoKind.equals("8"))
+        else if(infoKind.equals("7"))
         {
             result="金融机构";
         }
-        else if(this.infoKind.equals("9"))
+        else if(infoKind.equals("8"))
+        {
+            result="通讯录";
+        }
+        else if(infoKind.equals("9"))
         {
             result="";
         }
         return  result;
+    }
+
+    //得到xls模板的文件名
+    public static String getExcelModelFileDir(String infoKind)
+    {
+        //定义模板和excel的映射关系
+        String modelFiledir="";
+        if(infoKind.equals("1"))
+        {
+            modelFiledir= "重点区域.xls";
+        }
+        else if(infoKind.equals("2"))
+        {
+            modelFiledir="重点领域.xls";
+        }
+        else if(infoKind.equals("3"))
+        {
+            modelFiledir="重点实验室.xls";
+        }
+        else if(infoKind.equals("4"))
+        {
+            modelFiledir="重点项目.xls";
+        }
+        else if(infoKind.equals("5"))
+        {
+            modelFiledir="重点企业.xls";
+        }
+        else if(infoKind.equals("6"))
+        {
+            modelFiledir="重点院校.xls";
+        }
+        else if(infoKind.equals("7"))
+        {
+            modelFiledir="金融机构.xls";
+        }
+        else if(infoKind.equals("8"))
+        {
+            modelFiledir="通讯录.xls";
+        }
+        return modelFiledir;
+    }
+
+    //得到Word模板的文件名
+    public static String getWordModelFileDir(String infoKind)
+    {
+        //定义模板和excel的映射关系
+        String modelFiledir="";
+        if(infoKind.equals("1"))
+        {
+            modelFiledir= "重点区域.doc";
+        }
+        else if(infoKind.equals("2"))
+        {
+            modelFiledir="重点领域.doc";
+        }
+        else if(infoKind.equals("3"))
+        {
+            modelFiledir="重点实验室.doc";
+        }
+        else if(infoKind.equals("4"))
+        {
+            modelFiledir="重点项目.doc";
+        }
+        else if(infoKind.equals("5"))
+        {
+            modelFiledir="重点企业.doc";
+        }
+        else if(infoKind.equals("6"))
+        {
+            modelFiledir="重点院校.doc";
+        }
+        else if(infoKind.equals("7"))
+        {
+            modelFiledir="金融机构.doc";
+        }
+        else if(infoKind.equals("8"))
+        {
+            modelFiledir="通讯录.doc";
+        }
+        return modelFiledir;
+    }
+
+    //根据字段的类型，得到导入的Excel数据和字段的映射关系Map
+    public static Map<Integer,String> getImportXlsMap(String infoKind)
+    {
+        Map<Integer,String> map1=new HashedMap();
+        if(infoKind.equals("1"))            //重点区域
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"txt1");
+            map1.put(5,"txt2");map1.put(6,"txt3");map1.put(7,"str6");map1.put(8,"str7");
+            map1.put(9,"abc");
+        }
+        else if(infoKind.equals("2"))       //重点领域
+        {
+            map1.put(1,"str1");map1.put(2,"str3");map1.put(3,"str4");
+            map1.put(4,"str5");map1.put(5,"str6");map1.put(6,"str7");map1.put(7,"str8");
+            map1.put(8,"abc");
+        }
+        else if(infoKind.equals("3"))       //重点实验室
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"txt1");map1.put(8,"txt2");
+            map1.put(9,"str9");map1.put(10,"str10");
+            map1.put(11,"abc");
+        }
+        else if(infoKind.equals("4"))      //重点项目
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+            map1.put(9,"txt1");map1.put(10,"txt2");map1.put(11,"str11");map1.put(12,"str12");
+            map1.put(13,"abc");
+        }
+        else if(infoKind.equals("5"))      //重点企业
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+            map1.put(9,"str9");map1.put(10,"str10");map1.put(11,"str11");map1.put(12,"str12");
+            map1.put(13,"txt1");map1.put(14,"txt2");map1.put(15,"str15");map1.put(16,"str16");
+            map1.put(17,"abc");
+        }
+        else if(infoKind.equals("6"))      //重点院校
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
+            map1.put(9,"str9");
+            map1.put(10,"abc");
+        }
+        else if(infoKind.equals("7"))     //金融机构
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
+            map1.put(9,"str9");
+            map1.put(10,"abc");
+        }
+        else if(infoKind.equals("8"))    //通讯录
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+            map1.put(9,"str9");
+        }
+        return  map1;
+    }
+
+    //根据字段的类型，得到导出的Excel数据和字段的映射关系Map
+    public static Map<Integer,String> getExportXlsMap(String infoKind)
+    {
+        Map<Integer,String> map1=new HashedMap();
+        if(infoKind.equals("1"))            //重点区域
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"txt1");
+            map1.put(5,"txt2");map1.put(6,"txt3");map1.put(7,"str6");map1.put(8,"str7");
+            map1.put(9,"abc");
+        }
+        else if(infoKind.equals("2"))       //重点领域
+        {
+            map1.put(1,"str1");map1.put(2,"str3");map1.put(3,"str4");
+            map1.put(4,"str5");map1.put(5,"str6");map1.put(6,"str7");map1.put(7,"str8");
+            map1.put(8,"abc");
+        }
+        else if(infoKind.equals("3"))       //重点实验室
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"txt1");map1.put(8,"txt2");
+            map1.put(9,"str9");map1.put(10,"str10");
+            map1.put(11,"abc");
+        }
+        else if(infoKind.equals("4"))      //重点项目
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+            map1.put(9,"txt1");map1.put(10,"txt2");map1.put(11,"str11");map1.put(12,"str12");
+            map1.put(13,"abc");
+        }
+        else if(infoKind.equals("5"))      //重点企业
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+            map1.put(9,"str9");map1.put(10,"str10");map1.put(11,"str11");map1.put(12,"str12");
+            map1.put(13,"txt1");map1.put(14,"txt2");map1.put(15,"str15");map1.put(16,"str16");
+            map1.put(17,"abc");
+        }
+        else if(infoKind.equals("6"))      //重点院校
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
+            map1.put(9,"str9");
+            map1.put(10,"abc");
+        }
+        else if(infoKind.equals("7"))     //金融机构
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
+            map1.put(9,"str9");
+            map1.put(10,"abc");
+        }
+        else if(infoKind.equals("8"))    //通讯录
+        {
+            map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
+            map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
+            map1.put(9,"str9");
+        }
+        return  map1;
     }
 }

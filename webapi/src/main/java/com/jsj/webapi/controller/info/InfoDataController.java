@@ -15,6 +15,7 @@ import com.jsj.webapi.exception.MyException;
 import com.jsj.webapi.service.info.InfoDataService;
 import com.jsj.webapi.service.log.OperateLogService;
 import com.jsj.webapi.utils.ExcelImportUtils;
+import com.jsj.webapi.utils.FileUtils;
 import com.spire.doc.Document;
 import com.spire.doc.FileFormat;
 import com.spire.doc.collections.BookmarkCollection;
@@ -23,7 +24,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections.map.HashedMap;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.hwpf.HWPFDocument;
@@ -42,6 +42,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import java.io.*;
+import java.net.URLDecoder;
 import java.util.*;
 
 /**
@@ -240,8 +241,6 @@ public class InfoDataController {
         }
     }
 
-
-
     /**
      * 说明：成批的将数据导入到待报列表
      * @param ids
@@ -262,16 +261,9 @@ public class InfoDataController {
             log1.setOperatTime(new Date());
             log1.setOperatContent("成批的将数据导入到待报列表："+ids);
             this.operateLogService.save(log1);
-
-            return HttpResultUtil.success();
         }
-        else
-        {
-            return HttpResultUtil.error(40,"删除数据操作失败！");
-        }
+        return HttpResultUtil.success("将数据导入到待报列表数据操作成功【"+id1+"】");
     }
-
-
 
     /**
      * 说明：成批设置数据的分类
@@ -341,61 +333,12 @@ public class InfoDataController {
             Integer begRow=1;
 
             //定义Excel与字段的映射关系
-            Map<Integer,String> map1=new HashedMap();
-            if(infoKind.equals("1"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"txt1");
-                map1.put(5,"txt2");map1.put(6,"txt3");map1.put(7,"str7");map1.put(8,"str8");
-            }
-            else if(infoKind.equals("2"))
-            {
-                map1.put(1,"str1");map1.put(2,"str3");map1.put(3,"str4");
-                map1.put(4,"str5");map1.put(5,"str6");map1.put(6,"str7");map1.put(7,"str8");
-            }
-            else if(infoKind.equals("3"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"txt1");map1.put(8,"txt2");
-                map1.put(9,"str9");map1.put(10,"str10");
-            }
-            else if(infoKind.equals("4"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
-                map1.put(9,"txt1");map1.put(10,"txt2");map1.put(11,"str11");map1.put(12,"str12");
-            }
-            else if(infoKind.equals("5"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
-                map1.put(9,"str9");map1.put(10,"str10");map1.put(11,"str11");map1.put(12,"str12");
-                map1.put(13,"txt1");map1.put(14,"txt2");map1.put(15,"str15");map1.put(16,"str16");
-            }
-            else if(infoKind.equals("6"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
-                map1.put(9,"str9");
-            }
-            else if(infoKind.equals("7"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"txt1");map1.put(7,"txt2");map1.put(8,"str8");
-                map1.put(9,"str9");
-            }
-            else if(infoKind.equals("8"))
-            {
-                map1.put(1,"str1");map1.put(2,"str2");map1.put(3,"str3");map1.put(4,"str4");
-                map1.put(5,"str5");map1.put(6,"str6");map1.put(7,"str7");map1.put(8,"str8");
-                map1.put(9,"str9");
-            }
-
+            Map<Integer,String> map1=InfoData.getImportXlsMap(infoKind);
             String error=this.infoDataService.ImportXlsToInfoDB(wb,infoKind,begRow,map1);
             if(MyStringUtil.isNotEmpty(error))
             {
                 return HttpResultUtil.error(900,error);
             }
-
             //插入操作日志
             OperateLog log1 = new OperateLog();
             log1.setLogType(1);
@@ -432,108 +375,17 @@ public class InfoDataController {
     {
         Page p1=this.infoDataService.getSearch(para,1,10000);
         Integer begRow=1;
-        Map<Integer,String> colMapper=new HashedMap();
-
         if(p1.getContent().size()<=0)
         {
             return HttpResultUtil.error(900,"没有满足条件的数据！");
         }
         else
         {
-            String modelFiledir="";
-            String filePrex="";
             //定义模板和excel的映射关系
-            if(para.getInfoKind().equals("1"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点区域.xls";
-                filePrex="重点区域";
-                begRow=1;
-                for(int i=1;i<=8;i++) {
-                    if(i>3&&i<7){
-
-                        colMapper.put(i,"txt"+(i-3));
-                    }
-                    else colMapper.put(i,"str"+i);
-                }
-            }
-            else if(para.getInfoKind().equals("2"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点领域.xls";
-                filePrex="重点领域";
-                begRow=1;
-                colMapper.put(1,"str1");colMapper.put(2,"str3");colMapper.put(3,"str4");
-                colMapper.put(4,"str5");colMapper.put(5,"str6");colMapper.put(6,"str7");colMapper.put(7,"str8");
-            }
-            else if(para.getInfoKind().equals("3"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点实验室.xls";
-                begRow=1;
-                for(int i=1;i<=10;i++) {
-                    if(i>6&&i<9){
-
-                        colMapper.put(i,"txt"+(i-6));
-                    }
-                    else colMapper.put(i,"str"+i);
-                }
-
-                filePrex="重点实验室";
-            }
-            else if(para.getInfoKind().equals("4"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点项目.xls";
-                begRow=1;
-                for(int i=1;i<=12;i++) {
-                    if(i>8&&i<11){
-
-                        colMapper.put(i,"txt"+(i-8));
-                    }
-                    else colMapper.put(i,"str"+i);
-                }
-                filePrex="重点项目";
-            }
-            else if(para.getInfoKind().equals("5"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点企业.xls";
-                begRow=1;
-                for(int i=1;i<=16;i++) {
-                    if(i>12&&i<15){
-                        colMapper.put(i,"txt"+(i-12));
-                    }
-                    else colMapper.put(i,"str"+i);
-                }
-                filePrex="重点企业";
-            }
-            else if(para.getInfoKind().equals("6"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点高校.xls";
-                begRow=1;
-                for(int i=1;i<=9;i++) {
-                    if(i>5&&i<8){
-                        colMapper.put(i,"txt"+(i-5));
-                    }
-                    else colMapper.put(i,"str"+i);
-                }
-                filePrex="重点高校";
-            }
-            else if(para.getInfoKind().equals("7"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"金融机构.xls";
-                begRow=1;
-                for(int i=1;i<=9;i++) {
-                    if(i>5&&i<8){
-                        colMapper.put(i,"txt"+(i-5));
-                    }
-                    else colMapper.put(i,"str"+i);
-                }
-                filePrex="金融机构";
-            }
-            else if(para.getInfoKind().equals("8"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"通讯录.xls";
-                begRow=1;
-                for(int i=1;i<=9;i++) colMapper.put(i,"str"+i);
-                filePrex="通讯录";
-            }
+            Map<Integer,String> colMapper=InfoData.getExportXlsMap(para.getInfoKind());
+            String filePrex=InfoData.getNameByInfoKind(para.getInfoKind());
+            String modelFiledir=FileUtils.getFileRootPath()+appWeb.getTemplates()+ File.separator+InfoData.getExcelModelFileDir(para.getInfoKind());
+            modelFiledir=URLDecoder.decode(modelFiledir,"UTF-8");
 
             File modelFile = new File(modelFiledir);
             if(!modelFile.exists())
@@ -559,7 +411,6 @@ public class InfoDataController {
 
             // 自动换行
             style.setWrapText(true);
-
             List<Map<String,Object>> data1=p1.getContent();
             int maxRow=begRow;
             for(Map<String,Object> item : data1) {
@@ -594,8 +445,10 @@ public class InfoDataController {
 
             //生成一个输出的文件,并将数据写入输出文件
             String outFileName = filePrex+KeyUtil.genUniqueKey() + ".xls";
-            File outFile = new File(appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName);
-            ;
+            String outFileName1=FileUtils.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+            outFileName1=URLDecoder.decode(outFileName1,"UTF-8");
+
+            File outFile = new File( outFileName1);
             if (!outFile.exists()) {
                 outFile.createNewFile();
             }
@@ -630,49 +483,10 @@ public class InfoDataController {
             BeanUtils.copyProperties(d1,para);
             //将数据填入word文档
 
-            String modelFiledir="";
-            String filePrex="";
-            //定义模板和excel的映射关系
-            if(para.getInfoKind().equals("1"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点区域.doc";
-                filePrex="重点区域";
-            }
-            else if(para.getInfoKind().equals("2"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点领域.doc";
-                filePrex="重点领域";
-            }
-            else if(para.getInfoKind().equals("3"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点实验室.doc";
-                filePrex="重点实验室";
-            }
-            else if(para.getInfoKind().equals("4"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点项目.doc";
-                filePrex="重点项目";
-            }
-            else if(para.getInfoKind().equals("5"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点企业.doc";
-                filePrex="重点企业";
-            }
-            else if(para.getInfoKind().equals("6"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"重点院校.doc";
-                filePrex="重点院校";
-            }
-            else if(para.getInfoKind().equals("7"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"金融机构.doc";
-                filePrex="金融机构";
-            }
-            else if(para.getInfoKind().equals("8"))
-            {
-                modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"通讯录.doc";
-                filePrex="通讯录";
-            }
+            String filePrex= InfoData.getNameByInfoKind(para.getInfoKind());
+            String modelFiledir=FileUtils.getFileRootPath()+appWeb.getTemplates()+ File.separator+ InfoData.getWordModelFileDir(para.getInfoKind());;
+            modelFiledir=URLDecoder.decode(modelFiledir,"UTF-8");
+
             File modelFile = new File(modelFiledir);
             if(!modelFile.exists())
             {
@@ -737,7 +551,8 @@ public class InfoDataController {
         }
         //保存文档
         String outFileName = filePrex+KeyUtil.genUniqueKey() + ".doc";
-        String outFile =appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+        String outFile =FileUtils.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+        outFile=URLDecoder.decode(outFile,"UTF-8");
         doc.saveToFile(outFile, FileFormat.Doc);
         return outFileName;
     }
@@ -771,7 +586,8 @@ public class InfoDataController {
             }
             //保存文档
             outFileName = filePrex+KeyUtil.genUniqueKey() + ".doc";
-            String outFile =appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+            String outFile =FileUtils.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
+            outFile=URLDecoder.decode(outFile,"UTF-8");
             OutputStream os = new FileOutputStream(outFile);
             document.write(os);
 

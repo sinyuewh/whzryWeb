@@ -9,6 +9,7 @@ import com.jsj.webapi.dataobject.info.InfoData;
 import com.jsj.webapi.dataobject.info.ReportInfoData;
 import com.jsj.webapi.dto.info.InfoDTO;
 import com.jsj.webapi.exception.MyException;
+import com.jsj.webapi.repository.info.InfoDataRepository;
 import com.jsj.webapi.repository.info.ReportInfoDataRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
@@ -36,6 +37,9 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
 
     @Autowired
     private ReportInfoDataRepository reportInfoDataRepository;
+
+    @Autowired
+    private InfoDataRepository infoDataRepository;
 
 
     //得到特定字段唯一的查询结果
@@ -145,7 +149,7 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
         */
 
         //返回查询的列
-        String fs = "infoData.*";
+        String fs = "infoData.*,DATE_FORMAT(reportTime,'%Y-%m-%d') reportTime1";
 
         Page p1 = this.getPageListMapData(fs, "infoData.id desc", condition, pageIndex, pageSize);
         return p1;
@@ -224,13 +228,49 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
     }
 
 
+    /**
+     * 将多条数据加入到【待报列表】
+     * @param ids
+     * @return
+     */
+    @Transactional
+    public int addReportList(String ids)
+    {
+        int result=0;
+        if(MyStringUtil.isNotEmpty(ids))
+        {
+            String[] s1=ids.split(",");
+            for(String m :s1)
+            {
+                InfoData data1= this.findOne(Integer.parseInt(m));
+                if(data1!=null) {
+                    Integer parent= data1.getId();
+                    ReportInfoData data2=this.reportInfoDataRepository.findFirstByParent(parent);
+                    if(data2==null) {
+                        data2=new ReportInfoData();
+                        BeanUtils.copyProperties(data1,data2);
+                        data2.setDefault();
+                        data2.setId(0);
+                        data2.setInfoName(InfoData.getNameByInfoKind(data1.getInfoKind()));
+                        data2.setParent(parent);
+                        this.reportInfoDataRepository.save(data2);
+                        result++;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+
     /*----------------------------------------------------------------------------------------------------------*/
 
     //将Xls对象的数据导入到数据库
     @Transactional
     public String ImportXlsToInfoDB(Integer sheetIndex,Workbook wb,String infoKind,
                                     Integer begRow,
-                                    Map<Integer,String> colDic) throws  Exception
+                                    Map<Integer,String> colDic,
+                                    String reportName) throws  Exception
     {
         //得到第一个shell
         String[] cols=new String[]{};
@@ -286,9 +326,32 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
             MapUtil.fillBeanByMap(data,dto1);
 
             //创建对象和赋值
-            InfoData target=new InfoData();
-            BeanUtils.copyProperties(dto1,target);
-            target.setDefault();
+            Boolean isNewData=false;
+            InfoData target=null;
+            if(infoKind.equals("1"))
+            {
+               target=new InfoData();
+               isNewData=true;
+            }
+            else
+            {
+                List<InfoData> list=this.infoDataRepository.findAllByStr1AndInfoKind(dto1.getStr1(),infoKind);
+                if(list.size()>0)
+                {
+                    target=list.get(0);
+                }
+                else {
+                    target = new InfoData();
+                    isNewData = true;
+                }
+            }
+            BeanUtils.copyProperties(dto1,target,"id");
+            if(isNewData) {
+                target.setDefault();
+                target.setReportName(reportName);
+                target.setReportTime(new Date());
+                target.setReportStatus(0);
+            }
             target.setInfoKind(infoKind);
             target=this.save(target);
         }
@@ -300,6 +363,6 @@ public class InfoDataService extends BaseService<InfoData, Integer> {
                                 Integer begRow,
                                 Map<Integer,String> colDic) throws  Exception
     {
-        return this.ImportXlsToInfoDB(0,wb,infoKind,begRow,colDic);          //返回空字符串，表示成功
+        return this.ImportXlsToInfoDB(0,wb,infoKind,begRow,colDic,"");          //返回空字符串，表示成功
     }
 }

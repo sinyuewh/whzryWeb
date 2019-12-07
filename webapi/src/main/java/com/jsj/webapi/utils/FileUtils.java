@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ClassUtils;
 import org.springframework.util.ResourceUtils;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -62,7 +63,7 @@ public class FileUtils {
         String filename="";
         if(file!=null)
         {
-            String serverPath=appWeb.getFileRootPath();      //文件的根目录
+            String serverPath=FileUtils.getFileRootPath();      //文件的根目录
             String saveDir=appWeb.getAppFile();              //App文件保存的目录
             //保存到服务器的文件名
             String serviceName = KeyUtil.get32UUID()
@@ -99,7 +100,7 @@ public class FileUtils {
         return filename;
     }
 
-    /**
+     /**
      * 利用文件的完整url，得到文件的url信息，去掉http，ip和端口和前缀的信息的信息
      * @param fullUrl
      * @return
@@ -191,5 +192,12 @@ public class FileUtils {
          String fName = fileDir;
          String fileName = fName.substring(fName.lastIndexOf("/")+1);
          return fileName;
+     }
+
+
+     //得到static的物理根目录
+     public static String getFileRootPath()
+     {
+         return ClassUtils.getDefaultClassLoader().getResource("").getPath()+"static/";
      }
 }

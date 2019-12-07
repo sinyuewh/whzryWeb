@@ -45,14 +45,6 @@ spring:
     #json中不显示null的值
     default-property-inclusion: non_null
 
-  resources:
-    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
-    chain:
-      strategy:
-        content:
-          enabled: true
-          paths: /**
-
 server:
   context-path: /whrzy
   port: 9090
@@ -60,17 +52,19 @@ server:
 #自定义的属性和值zhiyou2018
 appWeb:
   pageSize: 300
-  fileRootPath: E:/武汉中瑞源信息管理系统/whzry2019Solution/whzryWeb/webapi/src/main/resources/static/    #文件服务器物理根目录
-
   templates:  templates                                #模板文件保存的目录
   uploadFile: uploadFiles                              #用户上传的其他文件（例如年检报告，事故记录，电梯知识库）存放的目录
   appFile:    appFiles                                  #App上传的文件目录
   tempFile:   tempFiles                                 #数据导入时，临时保存的文件
 
 
-place: ${web.upload-path}
-web:
-  upload-path: E:/武汉中瑞源信息管理系统/whzry2019Solution/whzryWeb/webapi/src/main/resources/static/
+  spring:
+    mvc:
+      static-path-pattern: /**
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,\
+        classpath:/static/static/,classpath:/static/,classpath:/public/,file:${web.upload-path},file:./static/pic/
+
 
 
 

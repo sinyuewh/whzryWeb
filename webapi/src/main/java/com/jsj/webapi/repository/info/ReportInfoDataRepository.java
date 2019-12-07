@@ -3,7 +3,6 @@ package com.jsj.webapi.repository.info;/**
  */
 
 import com.jsj.common.repository.BaseRepository;
-import com.jsj.webapi.dataobject.info.InfoData;
 import com.jsj.webapi.dataobject.info.ReportInfoData;
 
 /**
@@ -13,6 +12,6 @@ import com.jsj.webapi.dataobject.info.ReportInfoData;
 
 public interface ReportInfoDataRepository extends BaseRepository<ReportInfoData, Integer> {
 
-    public ReportInfoData findDistinctByParent(Integer parent);
+    public ReportInfoData findFirstByParent(Integer parent);
 
 }

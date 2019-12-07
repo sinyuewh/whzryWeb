@@ -9,6 +9,7 @@ import com.jsj.webapi.dataobject.log.OperateLog;
 import com.jsj.webapi.dto.info.InfoDTO;
 import com.jsj.webapi.dto.log.OperateLogDTO;
 import com.jsj.webapi.service.log.OperateLogService;
+import com.jsj.webapi.utils.FileUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -122,12 +123,11 @@ public class OperateLogController {
             String modelFiledir="";
             String filePrex="";
             //定义模板和excel的映射关系
-            modelFiledir=appWeb.getFileRootPath()+appWeb.getTemplates()+ File.separator+"操作日志.xls";
+            modelFiledir=FileUtils.getFileRootPath()+appWeb.getTemplates()+ File.separator+"操作日志.xls";
             filePrex="操作日志";
             begRow=1;
             //改
 //            for(int i=1;i<=3;i++) colMapper.put(i,"str"+i);
-
             colMapper.put(1,"userName");
             colMapper.put(2,"operatTime");
             colMapper.put(3,"operatContent");
@@ -191,7 +191,7 @@ public class OperateLogController {
 
             //生成一个输出的文件,并将数据写入输出文件
             String outFileName = filePrex+KeyUtil.genUniqueKey() + ".xls";
-            File outFile = new File(appWeb.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName);
+            File outFile = new File(FileUtils.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName);
             ;
             if (!outFile.exists()) {
                 outFile.createNewFile();
