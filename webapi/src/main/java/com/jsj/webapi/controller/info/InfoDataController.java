@@ -533,6 +533,32 @@ public class InfoDataController {
         return HttpResultUtil.success(p1);
     }
 
+
+    /**
+     * 接口说明：得到不同信息分组数量
+     * @return
+     */
+    @ApiOperation(value = "得到不同信息分组数量",notes = "")
+    @PostMapping(value = "/getInfoCount")
+    public HttpResult getInfoCount( ) throws Exception
+    {
+        String sql="select infokind,count(*) count from infodata group by infokind";
+        List<Map<String,Object>> list=this.infoDataService.getListData(sql);
+        Dictionary<String,Integer> dic1=new Hashtable<>();
+        for(int i=1;i<=8;i++)
+        {
+            dic1.put(i+"",0);
+        }
+        for(Object item :list)
+        {
+            Map<String,Object> map1=(Map<String,Object>)item;
+            String key1=map1.get("infokind").toString();
+            dic1.put(key1,Integer.parseInt(map1.get("count").toString()));
+        }
+        return HttpResultUtil.success(dic1);
+    }
+
+
     //-----------------------------------------------------------------------------------------------------------------
     //利用com.spire.doc 设置doc控件的值
     private String setWordValue(String modelFiledir,InfoDTO para,
