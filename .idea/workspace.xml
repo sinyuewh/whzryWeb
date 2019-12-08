@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="afb4f2c7-ce32-43d7-a228-96e3c2852970" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" afterPath="$PROJECT_DIR$/webapi/src/main/java/com/jsj/webapi/controller/info/InfoDataController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapi/src/main/resources/application-dev.yml" afterPath="$PROJECT_DIR$/webapi/src/main/resources/application-dev.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/common/target/" />
     <ignored path="$PROJECT_DIR$/webapi/target/" />
@@ -811,7 +809,7 @@
       <workItem from="1575461784161" duration="6287000" />
       <workItem from="1575636695119" duration="14289000" />
       <workItem from="1575687767754" duration="27001000" />
-      <workItem from="1575785031544" duration="13778000" />
+      <workItem from="1575785031544" duration="13800000" />
     </task>
     <task id="LOCAL-00001" summary="delete test">
       <created>1574003633872</created>
@@ -862,11 +860,18 @@
       <option name="project" value="LOCAL" />
       <updated>1575806137888</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="delete test">
+      <created>1575815969735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1575815969735</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106862000" />
+    <option name="totallyTimeSpent" value="106884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
