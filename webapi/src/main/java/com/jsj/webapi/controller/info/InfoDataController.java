@@ -123,7 +123,9 @@ public class InfoDataController {
             target.setDefault();
         }
         else {
+            String abc=target.getAbc();
             BeanUtils.copyProperties(para,target);
+            target.setAbc(abc);
         }
         //保存数据
         target=infoDataService.save(target);
@@ -507,7 +509,7 @@ public class InfoDataController {
                 list0.add("time"+i);
             }
             //设置书签的内容
-            String outFileName=this.setWordValue2(modelFiledir,para,list0,filePrex);
+            String outFileName=this.setWordValue(modelFiledir,para,list0,filePrex);
             return HttpResultUtil.success(appWeb.getTempFile() + "/" + outFileName);
         }
         else
@@ -537,6 +539,12 @@ public class InfoDataController {
              List<String> list0,String filePrex) throws Exception
     {
         Document doc = new Document();
+        //modelFiledir="E:\\武汉中瑞源信息管理系统\\whzry2019Solution\\whzryWeb\\webapi\\target\\classes\\static\\templates\\重点实验室.doc";
+        modelFiledir=modelFiledir.replace("/",File.separator);
+        if(modelFiledir.contains(":"))
+        {
+            modelFiledir=modelFiledir.substring(1);
+        }
         doc.loadFromFile(modelFiledir);
         BookmarksNavigator bookmarksNavigator = new BookmarksNavigator(doc);
         Map<String,Object> map1=MapUtil.convertBean(para);
@@ -554,6 +562,9 @@ public class InfoDataController {
         String outFile =FileUtils.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
         outFile=URLDecoder.decode(outFile,"UTF-8");
         doc.saveToFile(outFile, FileFormat.Doc);
+
+        //删除文档上的 Evaluation Warning: The document was created with Spire.Doc for JAVA.
+        this.clearEvaluate(outFile);
         return outFileName;
     }
 
@@ -591,6 +602,29 @@ public class InfoDataController {
             OutputStream os = new FileOutputStream(outFile);
             document.write(os);
 
+            //关闭文件流
+            is.close();
+            os.close();
+        }
+        return outFileName;
+    }
+
+
+    //利用POI 删除文档上的 Evaluation Warning: The document was created with Spire.Doc for JAVA.
+    private String clearEvaluate(String modelFiledir) throws Exception
+    {
+        String evaluate="Evaluation Warning: The document was created with Spire.Doc for JAVA";
+        String outFileName="";
+        if (modelFiledir.endsWith(".doc")) {
+            InputStream is = new FileInputStream(new File(modelFiledir));
+            HWPFDocument document = new HWPFDocument(is);
+            Range range=new Range(0,evaluate.length()+1,document);
+            if(range!=null)
+            {
+                range.replaceText("",false);
+            }
+            OutputStream os = new FileOutputStream(modelFiledir);
+            document.write(os);
             //关闭文件流
             is.close();
             os.close();

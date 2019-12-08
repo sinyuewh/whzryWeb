@@ -6,8 +6,8 @@ spring:
       #url: jdbc:mysql://39.104.186.34:3306/zydb2018?characterEncoding=utf8
       #username: root
       #password: zhiyou2018
-
-      url: jdbc:mysql://localhost:3306/whrzyDB2019?characterEncoding=utf8
+      #whrzyDB2019
+      url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8
       username: root
       password: 123456
 

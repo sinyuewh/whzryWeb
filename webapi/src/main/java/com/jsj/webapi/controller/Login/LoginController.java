@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.Map;
 
 /**
  * @author ：jinshouji
@@ -33,7 +34,7 @@ import java.util.Date;
 @Slf4j
 @RestController
 @Api(tags = {"0登陆和注销"}, description = "登陆和注销")
-@RequestMapping(value = "/web")
+@RequestMapping(value = "/web/")
 public class LoginController {
 
     //用来记录日志
@@ -44,6 +45,28 @@ public class LoginController {
 
     @Autowired
     private OperateLogService operateLogService;
+
+    /**
+     * 接口说明：Web用户登录（包括平台用户和业主用户）
+     * @return
+     */
+    @ApiOperation(value = "用户初始化")
+    @RequestMapping(value = "userinit", method = RequestMethod.POST)
+    public HttpResult UserInit() throws  Exception
+    {
+        String sql="select count(*) count0 from Users";
+        Map<String,Object> map1=this.usersService.getFirstData(sql);
+        if(map1==null || map1.isEmpty() || Integer.parseInt(map1.get("count0").toString())==0 )
+        {
+            Users user1=new Users();
+            user1.setDefault();
+            user1.setUserLoginId("admin");
+            user1.setPassword("123456");
+            user1.setUserName("管理员");
+            this.usersService.save(user1);
+        }
+        return  HttpResultUtil.success();
+    }
 
     /**
      * 接口说明：Web用户登录（包括平台用户和业主用户）
