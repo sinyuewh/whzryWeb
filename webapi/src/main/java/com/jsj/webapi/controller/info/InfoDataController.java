@@ -588,6 +588,8 @@ public class InfoDataController {
         String outFile =FileUtils.getFileRootPath() + appWeb.getTempFile() + File.separator + outFileName;
         outFile=URLDecoder.decode(outFile,"UTF-8");
         doc.saveToFile(outFile, FileFormat.Doc);
+        doc.close();
+        Thread.sleep(100);
 
         //删除文档上的 Evaluation Warning: The document was created with Spire.Doc for JAVA.
         this.clearEvaluate(outFile);
@@ -637,13 +639,16 @@ public class InfoDataController {
 
 
     //利用POI 删除文档上的 Evaluation Warning: The document was created with Spire.Doc for JAVA.
-    private String clearEvaluate(String modelFiledir) throws Exception
+    private void clearEvaluate(String modelFiledir) throws Exception
     {
         String evaluate="Evaluation Warning: The document was created with Spire.Doc for JAVA";
         String outFileName="";
         if (modelFiledir.endsWith(".doc")) {
             InputStream is = new FileInputStream(new File(modelFiledir));
             HWPFDocument document = new HWPFDocument(is);
+            is.close();
+            is=null;
+
             Range range=new Range(0,evaluate.length()+1,document);
             if(range!=null)
             {
@@ -652,9 +657,9 @@ public class InfoDataController {
             OutputStream os = new FileOutputStream(modelFiledir);
             document.write(os);
             //关闭文件流
-            is.close();
+            os.flush();
             os.close();
+            os=null;
         }
-        return outFileName;
     }
 }
